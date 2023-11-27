@@ -1,0 +1,384 @@
+/* fonts 
+font-family:"nunito","opensans"; */
+
+* {
+    font-family: "nunito", "opensans";
+    letter-spacing: 1px;
+}
+
+#body {
+    visibility: 20%;
+    /* background: rgb(223, 175, 190);
+    background: linear-gradient(227deg, rgba(223, 175, 190, 1) 0%, rgba(242, 204, 139, 1) 90%); */
+}
+
+p {
+    margin-bottom: 5px !important;
+}
+
+
+/* images */
+
+.robohand {
+    width: 10%;
+    position: absolute;
+    top: 10rem;
+    right: 4rem;
+}
+
+
+/* images end  */
+
+#navbar {
+    margin: 4% 6% 2%;
+}
+
+#home {
+    background: url('../images/background-1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#home,
+#how-it-works {
+    padding-bottom: 5%;
+}
+
+.head-cont {
+    margin: 11% 10%;
+}
+
+.head-phrase {
+    font-weight: 500;
+    font-size: 60px;
+    letter-spacing: 2px;
+}
+
+.adverb {
+    font-size: 22px;
+    font-weight: 500;
+    padding: 2% 0%;
+    margin: 4% 0%;
+}
+
+.features {
+    font-size: 20px !important;
+}
+
+.f-left {
+    float: left;
+    width: 25%;
+}
+
+.f-1 {
+    width: 25%;
+}
+
+.f-2 {
+    margin-left: 1rem;
+    width: 19%;
+}
+
+.f-3 {
+    width: 28.5%;
+}
+
+.feature-head {
+    padding-top: 5%;
+    font-size: 1.5rem;
+}
+
+
+/* how it works */
+
+.font {
+    font-size: 1.2rem;
+}
+
+.howit-cont {
+    margin: 1% 0 7%
+}
+
+.howit-phrase {
+    padding-top: 2rem;
+}
+
+.h-1 {
+    padding-top: 37%;
+}
+
+.h-1,
+.h-2,
+.h-3 {
+    width: 80%;
+}
+
+.h-illustration {
+    padding-top: 11%;
+}
+
+.h-exp {
+    margin: 2rem 0;
+}
+
+
+/* types */
+
+#types {
+    margin-bottom: 7%;
+}
+
+.event-cont {
+    margin: 4% 6%;
+}
+
+.event-heading {
+    font-size: 2.9rem;
+}
+
+.event-para {
+    padding: 1% 1%;
+    font-size: 1.5rem;
+}
+
+.t-1 {
+    width: 77%;
+    margin-left: 10%;
+}
+
+.t-2 {
+    width: 54%;
+    margin-left: 21%;
+}
+
+.t-3 {
+    width: 74%;
+    margin-left: 12%;
+}
+
+.t-4 {
+    width: 43%;
+    margin-left: 25%;
+}
+
+.card-1,
+.card-3,
+.card-4 {
+    background: rgb(223, 175, 190);
+    background: linear-gradient(227deg, rgba(223, 175, 190, 1) 0%, rgba(242, 204, 139, 1) 90%);
+    border: 2px solid #343a40 !important;
+    border-bottom: 5px solid #343a40 !important;
+}
+
+.card-2 {
+    background: rgb(106, 147, 206);
+    background: linear-gradient(42deg, rgba(106, 147, 206, 1) 0%, rgba(33, 33, 32, 1) 90%);
+    border: 2px solid #343a40 !important;
+    color: white !important;
+    border-bottom: 5px solid #343a40 !important;
+}
+
+.white {
+    color: white !important;
+    opacity: 70% !important;
+}
+
+
+/* contact-us */
+
+#contact-us {
+    padding: 5% 0 0 0;
+    /* margin-bottom: 5%; */
+    background-color: #ffc6db;
+}
+
+.contact-heading {
+    font-size: 2.2rem;
+}
+
+.contact-para {
+    font-size: 1.2rem;
+    padding: 2% 0;
+}
+
+#footer {
+    background: url('../images/background-3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 3rem;
+    padding-bottom: 7%;
+    margin: 0 0 5% 0;
+}
+
+.anchor {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    margin: 0 0 2% 0;
+    /* text-align: center; */
+}
+
+
+/* ========Media Query=========== */
+
+@media only screen and (max-width: 600px) {
+    #navbar {
+        padding-top: 1rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .head-phrase {
+        margin-left: -20px;
+        padding: 1.5rem;
+        padding-bottom: 1rem;
+        font-size: 38px;
+        line-height: 3.2rem;
+    }
+    .adverb {
+        line-height: normal;
+        padding-bottom: 1rem;
+        font-size: 23px;
+    }
+    .row {
+        row-gap: 1rem;
+    }
+    .boi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .robo img {
+        transform: translateX(50px);
+        width: 16%;
+    }
+}
+
+
+/* <!-- how it works --> */
+
+@media only screen and (max-width: 600px) {
+    .howit-phrase {
+        font-size: 38px;
+    }
+    .section_T_main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section_steps h4 {
+        line-height: 15rem;
+    }
+    .section_T_IMG {
+        padding: 1%;
+    }
+    .section_T_IMG img {
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+    .section_T_B h4 {
+        font-weight: bold;
+        padding-bottom: 0.51rem;
+    }
+    .h-ex {
+        padding: 0 2rem 0 2rem;
+    }
+    .h-exp {
+        padding: 0 2rem 0 2rem;
+    }
+}
+
+
+/* <!-- types of events  --> */
+
+@media only screen and (max-width: 600px) {
+    #types {
+        padding: 2rem;
+    }
+    .event-heading {
+        font-size: 38px;
+        line-height: 3.2rem;
+        padding-bottom: 0.55rem;
+        text-align: center;
+    }
+    .event-para {
+        text-align: center;
+    }
+    .section_THREE_row {
+        padding-left: 0rem;
+    }
+}
+
+@media (min-width: 420px) {
+    .section_THREE_row {
+        padding-left: 1.5rem;
+    }
+}
+
+
+/* <!-- types of events  --> */
+
+@media only screen and (max-width: 600px) {
+    #contact-us {
+        padding: 1rem;
+    }
+    .contact-heading {
+        padding: 0px;
+        font-size: 38px;
+        line-height: 3rem;
+        word-break: keep-all;
+    }
+}
+
+
+/* animation */
+
+@keyframes moveHand {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+        /* Adjust the amount of movement */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.robohand {
+    animation: moveHand 3s infinite;
+    /* Adjust the duration as needed */
+}
+
+
+/* <!-- Footer  --> */
+
+@media only screen and (max-width: 600px) {
+    #footer {
+        padding: 1rem;
+    }
+    .anchor h3 {
+        font-weight: 600;
+        padding-bottom: 0.41rem;
+    }
+    .Footer_usecases h4 {
+        font-weight: 600;
+        padding-bottom: 0.41rem;
+    }
+    .Footer_sales h4 {
+        font-weight: 600;
+        padding-bottom: 0.41rem;
+    }
+}
+
+
+/* <!--  Actual Footer  --> */
+
+@media only screen and (max-width: 600px) {
+    footer nav {
+        text-align: center;
+        padding: 1rem;
+    }
+}
