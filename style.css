@@ -1,0 +1,228 @@
+:root {
+    --bg-color: #f8fafc;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --card-bg: #ffffff;
+    
+    /* Pastel Billing Colors (Green/Teacherish) */
+    --billing-primary: #10b981; 
+    --billing-light: #d1fae5;
+    --billing-gradient: linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%);
+
+    /* Pastel Frames Colors (Blue/Indigo) */
+    --frames-primary: #6366f1;
+    --frames-light: #e0e7ff;
+    --frames-gradient: linear-gradient(135deg, #e0e7ff 0%, #eef2ff 100%);
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header {
+    text-align: center;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.brand-title {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.brand-dot {
+    color: var(--billing-primary); /* Use one of the accent colors */
+}
+
+.brand-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.cards-container {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Specific Card Styling */
+.billing-card:hover {
+    border-color: var(--billing-primary);
+}
+
+.frames-card:hover {
+    border-color: var(--frames-primary);
+}
+
+.billing-card .icon-wrapper {
+    background: var(--billing-light);
+    color: var(--billing-primary);
+}
+
+.frames-card .icon-wrapper {
+    background: var(--frames-light);
+    color: var(--frames-primary);
+}
+
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.card:hover .icon-wrapper {
+    transform: scale(1.1);
+}
+
+.card h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.card-action {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-top: auto;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.billing-card .card-action { color: var(--billing-primary); }
+.frames-card .card-action { color: var(--frames-primary); }
+
+.card:hover .card-action {
+    opacity: 1;
+    gap: 1rem; /* Arrow moves slightly */
+}
+
+.footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    opacity: 0.6;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .brand-title {
+        font-size: 2.5rem;
+    }
+}
